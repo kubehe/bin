@@ -1,0 +1,20 @@
+export PATH="$HOME/bin:$PATH"
+
+export JBOSS_HOME=~/wildfly
+
+export PATH=\$PATH:\$JBOSS_HOME/bin
+
+export NODE_HOME=/usr/local/lib/node_modules
+
+export PATH=\$PATH:\$NODE_HOME
+
+export PATH=~/.yarn/bin:$PATH
+
+export PROJECTS_PATH="$HOME/Projects"
+
+export PATH=\${PATH}:/usr/local/MATLAB/R2018a/bin
+
+
+# export ANDROID_HOME=/opt/Android/SDK
+# export PATH=\${PATH}:\${ANDROID_HOME}/tools/bin
+# export PATH=\${PATH}:\${ANDROID_HOME}/platform-tools

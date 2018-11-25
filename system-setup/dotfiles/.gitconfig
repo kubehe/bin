@@ -1,0 +1,9 @@
+[user]
+	name = kubehe
+	email = jakub.k.b@hotmail.com
+
+[color]
+	ui = true
+
+[core]
+	excludesfile = ~/.gitignoreglobal

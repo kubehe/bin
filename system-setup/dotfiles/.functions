@@ -1,0 +1,12 @@
+
+mkreact () {
+  git clone https://github.com/kubehe/react-app-starter.git $PROJECTS_PATH/$1
+  cd $PROJECTS_PATH/$1
+  rm -rf .git
+  curl -u 'kubehe' https://api.github.com/user/repos -d '{"name":"${1}"}'
+  git init 
+  git add --all
+  git commit -m "init"
+  git push -u origin master
+  code $PROJECTS_PATH/$1
+}
