@@ -3,6 +3,11 @@
 apt install -y nodejs npm
 apt update && sudo apt install -y yarn
 
+chown -R $(whoami) ~/.npm
+npm i npm@latest -g
+npm i -g n
+n stable
+
 yarn global add create-react-app create-react-native-app express-generator jest eslint prettier
 
 # detects changes and reruns automatically
