@@ -71,3 +71,8 @@ apt install -y virtualbox virtualbox-ext-pack
 
 # guide: https://www.tldp.org/HOWTO/SMB-HOWTO-8.html
 apt install -y smbclient
+
+apt install -y python3-venv python3-pip
+
+# cool process killer 
+snap install fkill
