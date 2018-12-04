@@ -57,6 +57,7 @@ install () {
     . installation/docker.sh
     . installation/java.sh
     . installation/javascript.sh
+    . installation/azure-cli.sh
     echo "Installation finished"
   else 
     echo "Installation canceled"
