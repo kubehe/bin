@@ -10,7 +10,7 @@ apt -y install p7zip-full p7zip-rar
 apt remove libreoffice-core
 
 add-apt-repository ppa:libreoffice/ppa
-apt install -y vim gimp powertop openssh-server libreoffice
+apt install -y gimp powertop openssh-server libreoffice
 
 apt install -y snapd
 snap install chromium spotify vectr
@@ -24,7 +24,7 @@ code --install-extension Shan.code-settings-sync
 
 update-alternatives --set editor /snap/bin/vscode
 
-apt install -y python-pip
+apt install -y python-pip python3-venv python3-pip
 
 apt install -y curl wget
 
@@ -72,7 +72,7 @@ apt install -y virtualbox virtualbox-ext-pack
 # guide: https://www.tldp.org/HOWTO/SMB-HOWTO-8.html
 apt install -y smbclient
 
-apt install -y python3-venv python3-pip
-
 # cool process killer 
 snap install fkill
+
+apt install -y gnome-tweaks gnome-tweak-tool gnome-shell-extensions chrome-gnome-shell

@@ -58,6 +58,7 @@ install () {
     . installation/java.sh
     . installation/javascript.sh
     . installation/azure-cli.sh
+    . installation/go.sh
     echo "Installation finished"
   else 
     echo "Installation canceled"
