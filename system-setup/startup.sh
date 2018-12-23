@@ -15,18 +15,26 @@ linkDotfiles () {
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-    ln -sv dotfiles/.aliases $HOME
-    ln -sv dotfiles/.bash_profile $HOME
-    ln -sv dotfiles/.bashrc $HOME
-    ln -sv dotfiles/.exports $HOME
-    ln -sv dotfiles/.functions $HOME
-    ln -sv dotfiles/.gitconfig $HOME
-    ln -sv dotfiles/.gitignoreglobal $HOME
-    ln -sv dotfiles/.vimrc $HOME
+
+    backupIfFileExistsAndLink .aliases
+    backupIfFileExistsAndLink .bash_profile
+    backupIfFileExistsAndLink .bashrc
+    backupIfFileExistsAndLink .exports
+    backupIfFileExistsAndLink .functions
+    backupIfFileExistsAndLink .gitconfig
+    backupIfFileExistsAndLink .gitignoreglobal
+    backupIfFileExistsAndLink .vimrc
   else 
     echo "Configuration canceled"
     return 1
   fi
+}
+
+backupIfFileExistsAndLink () {
+  if [ -f $HOME/${1} ]; then
+    mv $HOME/${1} $HOME/${1}.old-version
+  fi
+  ln -rsv dotfiles/${1} $HOME
 }
 
 configure () {
