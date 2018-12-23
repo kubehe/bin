@@ -21,6 +21,8 @@ alias vac='source .venv/bin/activate'
 alias y="yarn"
 alias ya="yarn add"
 alias yad="yarn add --dev"
+alias yga="yarn global add"
+alias ygl="yarn global list"
 
 # Maven
 alias mci="maven clean install"
