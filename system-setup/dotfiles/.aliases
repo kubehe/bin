@@ -1,8 +1,30 @@
-# Python virtual env aliases
-
-alias venv='virtualenv -p /usr/local/bin/python3 .venv'
-alias vac='source .venv/bin/activate'
-
+# Basic aliases
 alias aptupgrade='sudo apt update && sudo apt dist-upgrade -V && sudo apt autoremove'
 
 alias myip='echo `curl -s ipinfo.io/ip`'
+
+## xclip copy/paste, example:
+##
+## $ echo "hello" | xcopy
+## $ xpaste
+## hello
+alias xcopy="xclip -selection clipboard"
+alias xpaste="xclip -selection clipboard -o"
+
+
+# Python
+## virtual env aliases
+alias venv='virtualenv -p /usr/local/bin/python3 .venv'
+alias vac='source .venv/bin/activate'
+
+# Yarn 
+alias y="yarn"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+
+# Maven
+alias mci="maven clean install"
+alias mct="maven clean test"
+
+# Gradle
+alias gct="gradle clean test"

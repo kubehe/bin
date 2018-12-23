@@ -10,4 +10,4 @@ apt-key --keyring /etc/apt/trusted.gpg.d/Microsoft.gpg adv \
      --recv-keys BC528686B50D79E339D3721CEB3E94ADBE1229CF
 
 apt-get update
-apt-get install azure-cli
+apt-get install azure-cli -y
