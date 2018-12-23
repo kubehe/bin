@@ -38,6 +38,7 @@ configure () {
     . configuration/folder-setup.sh
     . configuration/gnome.sh
     . configuration/intellij.sh
+    . configuration/terminal.sh
     echo "Configuration finished"
 
   else 
