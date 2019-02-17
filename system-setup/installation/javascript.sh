@@ -8,16 +8,17 @@ npm i npm@latest -g
 npm i -g n
 n stable
 
-yarn global add create-react-app create-react-native-app express-generator jest eslint prettier
-
-# detects changes and reruns automatically
-yarn global add nodemon
-
-# fast for localhost
-yarn global add localtunnel
-
-# deploying easily docker/static
-yarn global add now
+yarn global add \
+    create-react-app create-react-native-app \
+    express-generator \
+    jest eslint prettier \
+    generator-jhipster yo \
+    nodemon \
+    localtunnel \
+    now \
+    # nodemon => detects changes and reruns automatically
+    # localtunnel => fast for localhost
+    # now => deploying easily docker/static
 
 # user: mongodb pass: mongodb
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927

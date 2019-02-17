@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-mkdir ~/Projects
+mkdir ~/{Projects,tmp}
+

@@ -67,7 +67,7 @@ apt install -y steam
 
 apt install -y nfs-common
 
-apt install -y virtualbox virtualbox-ext-pack
+apt install -y virtualbox-dkms
 
 # guide: https://www.tldp.org/HOWTO/SMB-HOWTO-8.html
 apt install -y smbclient
@@ -76,3 +76,6 @@ apt install -y smbclient
 snap install fkill
 
 apt install -y gnome-tweaks gnome-tweak-tool gnome-shell-extensions chrome-gnome-shell
+
+# mainly epub, mobi files https://fbreader.org/
+apt install -y fbreader
