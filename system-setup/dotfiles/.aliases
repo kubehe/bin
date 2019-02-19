@@ -25,8 +25,8 @@ alias yga="yarn global add"
 alias ygl="yarn global list"
 
 # Maven
-alias mci="maven clean install"
-alias mct="maven clean test"
+alias mci="mvn clean install"
+alias mct="mvn clean test"
 
 # Gradle
 alias gct="gradle clean test"

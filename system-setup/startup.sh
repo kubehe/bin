@@ -35,6 +35,7 @@ backupIfFileExistsAndLink () {
     mv $HOME/${1} $HOME/${1}.old-version
   fi
   ln -rsv dotfiles/${1} $HOME
+  chown $(echo $USER):$(echo $USER) ${1} -h #? I don't know if there is more elegant solution
 }
 
 configure () {

@@ -118,9 +118,9 @@ fi
 
 
 # Source this first since it contains the locations of directories needed by functions
-source .exports
-source .functions
-source .aliases
+source ~/.exports
+source ~/.functions
+source ~/.aliases
 
 # vi mode in terminal
 set -o vi
