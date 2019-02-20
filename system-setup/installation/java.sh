@@ -2,9 +2,9 @@
 
 # apt install -y openjdk-11-jdk # installs java 10.0.2?!?
 
-wget https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz -O /tmp/openjdk-11+28_linux-x64_bin.tar.gz
-tar xfvz /tmp/openjdk-11+28_linux-x64_bin.tar.gz --directory /usr/lib/jvm
-rm -f /tmp/openjdk-11+28_linux-x64_bin.tar.gz
+sudo add-apt-repository ppa:openjdk-r/ppa \
+&& sudo apt-get update -q \
+&& sudo apt install -y openjdk-11-jdk
 
 apt-get install --only-upgrade default-jdk
 update-alternatives --config java
