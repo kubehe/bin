@@ -24,6 +24,9 @@ linkDotfiles () {
     backupIfFileExistsAndLink .gitconfig
     backupIfFileExistsAndLink .gitignoreglobal
     backupIfFileExistsAndLink .vimrc
+
+    mkdir -p .config/nvim/
+    chown $(echo $USER):$(id -gn $USER) .config/nvim/
     backupIfFileExistsAndLink .config/nvim/init.vim nvim-init.vim
   else 
     echo "Configuration canceled"
@@ -40,7 +43,7 @@ backupIfFileExistsAndLink () {
   else
     ln -rsv dotfiles/${2} $HOME/${1}
   fi
-  chown $(echo $USER):$(id -gn $USER) ${1} -h #? I don't know if there is more elegant solution
+  chown $(echo $USER):$(id -gn $USER) ${HOME}${1} -h #? I don't know if there is more elegant solution
 }
 
 configure () {
