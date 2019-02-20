@@ -16,18 +16,18 @@ linkDotfiles () {
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 
-    backupIfFileExistsAndLink .aliases
-    backupIfFileExistsAndLink .bash_profile
-    backupIfFileExistsAndLink .bashrc
-    backupIfFileExistsAndLink .exports
-    backupIfFileExistsAndLink .functions
-    backupIfFileExistsAndLink .gitconfig
-    backupIfFileExistsAndLink .gitignoreglobal
-    backupIfFileExistsAndLink .vimrc
+    backupIfFileExistsAndLink .aliases $HOME
+    backupIfFileExistsAndLink .bash_profile $HOME
+    backupIfFileExistsAndLink .bashrc $HOME
+    backupIfFileExistsAndLink .exports $HOME
+    backupIfFileExistsAndLink .functions $HOME
+    backupIfFileExistsAndLink .gitconfig $HOME
+    backupIfFileExistsAndLink .gitignoreglobal $HOME
+    backupIfFileExistsAndLink .vimrc $HOME
 
     mkdir -p .config/nvim/
-    chown $(echo $USER):$(id -gn $USER) .config/nvim/
-    backupIfFileExistsAndLink .config/nvim/init.vim nvim-init.vim
+    chown $(echo $USER):$(id -gn $USER) $HOME/.config/nvim
+    backupIfFileExistsAndLink init.vim $HOME/.config/nvim
   else 
     echo "Configuration canceled"
     return 1
@@ -35,15 +35,13 @@ linkDotfiles () {
 }
 
 backupIfFileExistsAndLink () {
-  if [ -f $HOME/${1} ]; then
-    mv $HOME/${1} $HOME/${1}.old-version
+  if [ -f ${2} ]; then
+    mv ${2} ${2}.old-version
   fi
-  if [ -z "${2}" ]; then
-    ln -rsv dotfiles/${1} $HOME
-  else
-    ln -rsv dotfiles/${2} $HOME/${1}
-  fi
-  chown $(echo $USER):$(id -gn $USER) ${HOME}${1} -h #? I don't know if there is more elegant solution
+
+  ln -rsv dotfiles/${1} ${2}
+
+  chown $(echo $USER):$(id -gn $USER) ${2} -h #? I don't know if there is more elegant solution
 }
 
 configure () {
