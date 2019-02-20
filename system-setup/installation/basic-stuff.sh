@@ -47,7 +47,7 @@ apt install -f
 rm python3-multibootusb_9.2.0-1_all.deb
 
 # maginificent editor  - gtk for system cliboard - "+ instead of "*
-apt install -y vim-gtk
+apt install -y vim-gtk neovim
 
 update-alternatives --config editor
 

@@ -24,6 +24,7 @@ linkDotfiles () {
     backupIfFileExistsAndLink .gitconfig
     backupIfFileExistsAndLink .gitignoreglobal
     backupIfFileExistsAndLink .vimrc
+    backupIfFileExistsAndLink .config/nvim/init.vim nvim-init.vim
   else 
     echo "Configuration canceled"
     return 1
@@ -34,7 +35,11 @@ backupIfFileExistsAndLink () {
   if [ -f $HOME/${1} ]; then
     mv $HOME/${1} $HOME/${1}.old-version
   fi
-  ln -rsv dotfiles/${1} $HOME
+  if [ -z "${2}" ]; then
+    ln -rsv dotfiles/${1} $HOME
+  else
+    ln -rsv dotfiles/${2} $HOME/${1}
+  fi
   chown $(echo $USER):$(id -gn $USER) ${1} -h #? I don't know if there is more elegant solution
 }
 

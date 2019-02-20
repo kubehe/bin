@@ -3,9 +3,9 @@
 apt install -y nodejs npm
 apt update && sudo apt install -y yarn
 
-chown -R $(whoami) ~/.npm
+chown -R $(whoami):$(id -gn $USER) ~/.npm
 npm i npm@latest -g
-npm i -g n
+npm i -g n ntl
 n stable
 
 yarn global add \
