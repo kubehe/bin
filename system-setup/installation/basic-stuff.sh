@@ -85,5 +85,5 @@ apt install -y gnome-tweaks gnome-tweak-tool gnome-shell-extensions chrome-gnome
 apt install -y fbreader
 
 # editor for gnome settings
-# xkb-options ['caps:swapescape'] <- swap caps lock with escape
-apt install dconf-tools
+# start dconf-editor then -> xkb-options ['caps:swapescape'] <- swap caps lock with escape
+apt install -y dconf-tools
