@@ -75,7 +75,15 @@ apt install -y smbclient
 # cool process killer 
 snap install fkill
 
+# https://getmailspring.com/
+snap install mailspring
+apt purge thunderbird*
+
 apt install -y gnome-tweaks gnome-tweak-tool gnome-shell-extensions chrome-gnome-shell
 
 # mainly epub, mobi files https://fbreader.org/
 apt install -y fbreader
+
+# editor for gnome settings
+# xkb-options ['caps:swapescape'] <- swap caps lock with escape
+apt install dconf-tools
