@@ -1,0 +1,15 @@
+version: '2.0'
+
+services:
+
+  vscode:
+    image: codercom/code-server
+    restart: always
+    ports:
+      - 8443:8443
+    volumes:
+      - /home/kubehe:/root/project
+    expose:
+      - 8433
+    entrypoint: code-server
+    command: --password=password --allow-http
