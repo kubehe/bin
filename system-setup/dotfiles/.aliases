@@ -30,3 +30,6 @@ alias mct="mvn clean test"
 
 # Gradle
 alias gct="gradle clean test"
+
+# abc https://hub.docker.com/r/appbaseio/abc/
+alias abc='docker run -i --rm -v abc:/root appbaseio/abc'
